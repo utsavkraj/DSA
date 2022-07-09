@@ -1,10 +1,13 @@
-package com.utsav.dsa.dataStructures.linkedList;
+package com.utsav.dsa.dataStructures.linkedList.singleLinkedList;
 
 import java.util.Objects;
 
 public class Node<T> {
     private T data;
     private Node<T> nextNode;
+
+    public Node() {
+    }
 
     public Node(T data, Node<T> nextNode) {
         this.data = data;
