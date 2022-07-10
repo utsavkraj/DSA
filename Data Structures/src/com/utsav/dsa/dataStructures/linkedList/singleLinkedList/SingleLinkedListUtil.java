@@ -2,7 +2,7 @@ package com.utsav.dsa.dataStructures.linkedList.singleLinkedList;
 
 public class SingleLinkedListUtil {
 
-    public void displaySingleLinkedList(Node<?> head) {
+    public void displaySingleLinkedList(Node head) {
         //if head is null obviously we can't just display anything so display null
         if (head == null) {
             System.out.println("null");
@@ -82,7 +82,7 @@ public class SingleLinkedListUtil {
         }
         return head;
     }
-
+    
     public int lengthOfLinkedList(Node head) {
         if (head == null) {
             return 0;
