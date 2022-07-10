@@ -82,7 +82,13 @@ public class SingleLinkedListUtil {
         }
         return head;
     }
-    
+
+    public void deleteNodeWithPointer(Node pointer) throws Exception {
+        Node temp = pointer;
+        pointer.setData(temp.getNextNode().getData());
+        pointer.setNextNode(temp.getNextNode().getNextNode());
+    }
+
     public int lengthOfLinkedList(Node head) {
         if (head == null) {
             return 0;
