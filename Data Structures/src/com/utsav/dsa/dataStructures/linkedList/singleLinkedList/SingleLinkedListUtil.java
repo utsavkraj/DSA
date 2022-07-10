@@ -82,4 +82,21 @@ public class SingleLinkedListUtil {
         }
         return head;
     }
+    
+    public int lengthOfLinkedList(Node head) {
+        if (head == null) {
+            return 0;
+        }
+        int count = 0;
+        Node pointer = head;
+        while (pointer != null) {
+            if (pointer.getNextNode() == null) {
+                count++;
+                break;
+            }
+            pointer = pointer.getNextNode();
+            count++;
+        }
+        return count;
+    }
 }
