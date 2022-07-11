@@ -55,6 +55,32 @@ public class SingleLinkedListUtil {
         }
     }
 
+    public <T> Node<T> addNodeWithIndex(Node head, T value, int index) throws Exception {
+        Node newNode = new Node(value, null);
+        Node current = head;
+        Node prev = null;
+        int length = this.lengthOfLinkedList(head);
+        if(index > length || index<0){
+            throw new Exception("Bad Index");
+        }
+        if(index == 0){
+            newNode.setNextNode(head);
+            head = newNode;
+            return head;
+        }
+        while (true){
+            if(index==0){
+                break;
+            }
+            prev = current;
+            current = current.getNextNode();
+            index--;
+        }
+        newNode.setNextNode(current);
+        prev.setNextNode(newNode);
+        return head;
+    }
+
     public <T> Node<T> deleteNodeWIthIndex(Node head, int value) throws Exception {
         Node pointer = head;
         if(value==0){
