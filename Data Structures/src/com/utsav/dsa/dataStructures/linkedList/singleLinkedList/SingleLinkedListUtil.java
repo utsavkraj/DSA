@@ -131,4 +131,13 @@ public class SingleLinkedListUtil {
         }
         return count;
     }
+
+    public <T> Node<T> makeLinkedListCircular(Node head){
+        Node current = head;
+        while (current.getNextNode()!=null){
+            current = current.getNextNode();
+        }
+        current.setNextNode(head);
+        return head;
+    }
 }
