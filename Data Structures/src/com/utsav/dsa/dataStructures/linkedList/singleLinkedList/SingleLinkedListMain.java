@@ -6,13 +6,12 @@ public class SingleLinkedListMain {
     public static void main(String[] args) throws Exception {
         SingleLinkedListUtil singleLinkedListUtil = new SingleLinkedListUtil();
         Integer[] arr = {100};
-        Integer[] arr2 = {2,4,9,10};
+        Integer[] arr2 = {1,2,3,4,5};
         Node head1 = singleLinkedListUtil.addArrayToLinkedList(arr);
         Node head2 = singleLinkedListUtil.addArrayToLinkedList(arr2);
 
-        MergeTwoSortedLinkedList mergeTwoSortedLinkedList = new MergeTwoSortedLinkedList();
-
-        System.out.println("Merging " + Arrays.toString(arr) + " and "+Arrays.toString(arr2));
-        singleLinkedListUtil.displaySingleLinkedList(mergeTwoSortedLinkedList.mergeSortedLinkedLists(head1,head2));
+        PairwiseSwap pairwiseSwap = new PairwiseSwap();
+        head2 = pairwiseSwap.pairwiseSwap(head2);
+        singleLinkedListUtil.displaySingleLinkedList(head2);
     }
 }
